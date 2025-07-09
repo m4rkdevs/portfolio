@@ -1,0 +1,493 @@
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    scrollbar-width: thin;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75,650;100,400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+nav {
+    background-color: rgba(121, 139, 177, 0.493); /* Fundo transparente */
+    padding: 5px 10px;
+    padding-right: 15px;
+    position: fixed; /* Fixa a navegação no topo */
+    width: 100%; /* Garante que a navegação ocupe a largura total */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Garante que a navegação fique sobre o conteúdo */
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-top: 15px;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+nav ul li a {
+    color: rgb(251, 250, 252);
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    transition: color 0.5s;
+    text-shadow: 5px 8px 10px black;
+}
+
+/* Efeito Neon no Hover */
+nav ul li a:hover {
+    color: rgb(253, 251, 251); /* Cor do texto neon */
+    text-shadow: 0 0 10px #0ff, /* Sombras múltiplas para efeito neon */
+                 0 0 15px #0ff,
+                 0 0 25px #0ff,
+                 0 0 35px #0ff,
+                 0 0 45px #0ff,
+                 0 0 55px #0ff,
+                 0 0 65px #0ff;
+    transition-duration:1s;
+}
+
+
+/* Estilos para a seção principal */
+
+section {
+    padding: 20px;
+}
+.p{
+    margin-left: 20px;
+}
+#sobre{
+    background-color:  #212429;
+    text-align:end;
+    box-shadow: 10px 5px 8px rgba(3, 247, 227, 0.356);
+    
+     
+}
+.texto1{
+    font-size: 1.9rem;;
+    text-align: left;
+    color:rgb(255, 254, 254);
+    line-height: 90px;
+    text-shadow: 0px 0px 10px rgb(4, 213, 250);
+    text-transform: uppercase;
+    margin-bottom: -10px;
+
+}
+.texto2{
+    font-size: 17px;
+    text-align: justify;
+    color:rgb(255, 255, 255);
+    line-height: 28px;
+    margin-right: 0px;
+    margin-left: 0px;
+    
+
+}
+html {
+    font-size: 10px;
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+    background-color: #1f242cf0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;  
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(4, 5, 6);
+}
+
+.section-title {
+    color: rgb(252, 251, 251);
+    font-size: 4rem;
+    letter-spacing: 0.4rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: -20%;
+
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+p {
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2, 5rem;
+    font-weight: 300;
+    letter-spacing: 0.05rem;
+
+}
+
+/* secçao de apresentação*/
+
+#presentation {
+    background-image:url("./image/flux.dev.jpg");
+    background-size:cover;
+    background-position: top center;
+    position:relative;
+    z-index: 1;
+     /* Centraliza a imagem */
+}
+
+#presentation h1 {
+    display: block;
+    width: fit-content;
+    font-size: 4.6rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1.5s;
+    margin-right:100px;
+    border-radius: 10px;
+    
+    
+}
+
+#presentation h1:nth-child(1) {
+    animation-delay: .8s;
+    
+    
+}
+
+#presentation h1:nth-child(2) {
+    animation-delay: 1.8s;
+}
+
+#presentation h1:nth-child(3) {
+    animation: text_reveal_name 0.5s ease forwards;
+    animation-delay: 2.8s;
+ 
+}
+
+.cta {
+    display: inline-block;
+    padding: 5px 20px ;
+    color: #fafaf8;
+    background-color:transparent;
+    border: 2px solid #fefefee6;
+    border-radius: 10px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin:10px;
+    margin-bottom: 10px;
+    transition: 2.2s ease;
+    
+   }
+
+.cta:hover {
+    color: rgb(255, 253, 253);
+    font-size: 500;
+    background-image: linear-gradient(40deg,rgb(5, 247, 255) 50%, rgb(245, 4, 253) );
+    opacity: 75%;
+    border: rgb(246, 245, 245);
+    filter: drop-shadow(0.3rem 1.1rem 1.3rem rgb(2, 208, 208));
+    
+}
+
+h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    animation: text_reveal_box 1s ease;
+    animation-delay: .4s;
+    background-image: linear-gradient(90deg,rgb(14, 13, 13) 50%, rgb(17, 7, 19) );
+    box-shadow: 10px 10px 10px rgb(179, 1, 250);
+    
+}
+
+#presentation h1:nth-child(1) span {
+    animation-delay: .5s;
+    
+       
+}
+
+#presentation h1:nth-child(2) span {
+    animation-delay: 1.5s;
+}
+
+#presentation h1:nth-child(3) span {
+    animation-delay: 2.5s;
+}
+
+#presentation::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.014);
+    opacity: 0.5;
+    z-index: -1;
+}
+
+/*Seçao de portifolio*/
+
+#portfolio .portfolio {
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 100px 0;
+
+}
+
+#portfolio .portfolio-header h1 {
+    margin-bottom: 50px;
+
+}
+
+#portfolio .header {
+    color: #f6f6f8;
+}
+
+#portfolio .all-projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#portfolio .project-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 10px 5px 8px rgba(3, 247, 227, 0.356);
+}
+
+#portfolio .project-info {
+    padding: 30px;
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(135deg, #0a0a0a 40%, rgb(0, 68, 80) 60%);
+    color: rgb(255, 255, 255);
+    opacity: 90%;
+    
+}
+.a1{
+    font-size: 15px;
+    color: #f5f7f7;
+    width: 120px;
+    height: 50px;
+    border-radius: 10px 0px;
+    background-color: rgb(0, 68, 80);
+    text-align: center;
+    padding-top: 9px;
+}
+.a1:hover{
+    color: rgb(4, 234, 250); /* Cor do texto neon */
+    box-shadow: 0 0 10px #0ff, /* Sombras múltiplas para efeito neon */
+                 0 0 10px #0ff,
+                 0 0 20px #0ff,
+                 0 0 30px #0ff,
+                 0 0 40px #0ff,
+                 0 0 50px #0ff,
+                 0 0 60px #0ff;
+    transition-duration:0.50s;
+    
+}
+.links,a{
+    display: flex;
+    justify-content:center;
+    height: 50px;
+    padding: 6px;
+    padding-bottom: 5px;
+    margin-bottom: -10px;
+    font-family:'Open Sans', sans-serif;
+    font-size: 1.4rem;
+}
+#portfolio .project-info h1 {
+    font-size: 4rem;
+    font-weight: 500;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    color: rgba(255, 252, 252, 0.555); /* Cor do texto neon */
+    text-shadow: 0 0 10px #0ff, /* Sombras múltiplas para efeito neon */
+                 0 0 10px #0ff,
+                 0 0 20px #0ff,
+                 0 0 30px #0ff,
+                 0 0 40px #0ff,
+                 0 0 50px #0ff,
+                 0 0 60px #0ff;
+}
+
+#portfolio .project-info h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+#portfolio .project-img {
+    flex-basis: 50%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+#portfolio .project-img:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    opacity: 0.3;
+}
+
+#portfolio .project-img img {
+    transition: 0.9s ease transform;
+}
+
+#portfolio .project-item:hover .project-img img {
+    transform: scale(1.3)
+}
+
+.section-title {
+    color: rgb(250, 247, 247);
+    font-size: 4rem;
+    letter-spacing: 0.4rem;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 10px rgb(4, 213, 250);
+
+}
+
+footer {
+    font-size: 1.4rem;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #212429;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    width: 100hv;
+    height: 130px;
+    text-decoration: none;
+}
+
+
+/*keyframes*/
+@keyframes text_reveal {
+    100% {
+        color: white;
+    }
+}
+
+@keyframes text_reveal_name {
+    100% {
+        color: #00fff2;
+        font-weight: 500px;
+        text-shadow: 2px 2px 1px rgb(3, 3, 3);
+        
+        
+
+    }
+}
+
+@keyframes text_reveal_box {
+    50% {
+        width: 100%;
+        left: 0;
+    }
+
+    100% {
+        width: 0;
+        left: 100%;
+    }
+
+}
+
+/*media query*/
+
+@media only screen and (min-width: 768px) {
+    #portfolio .project-item {
+        flex-direction: row;
+        height: 400px;
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+body{
+    flex-direction: row;
+    height: 300px;
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+    
+  }
+    #portfolio .all-projects .project-info {
+        height: 100%;
+
+    }
+
+    #portfolio .all-projects .project-img {
+        height: 100%;
+    }
+
+    #portfolio .project-item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        text-align: center;
+    }
+
+    .nav li {
+        margin: 15px 0;
+    }
+
+    .nav li.active {
+        display: flex;
+    }
+
+   
+}
+
+
+  
+  
